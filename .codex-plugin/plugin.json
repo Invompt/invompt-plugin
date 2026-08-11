@@ -1,0 +1,36 @@
+{
+  "name": "invompt",
+  "version": "1.2.72",
+  "description": "Invompt online invoicing workflows for invoices, exports, and connection health.",
+  "author": {
+    "name": "Invompt"
+  },
+  "homepage": "https://invompt.com",
+  "repository": "https://github.com/Invompt/invompt-plugin",
+  "keywords": [
+    "invompt",
+    "invoicing",
+    "pdf-export"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Invompt",
+    "shortDescription": "Invoices with Invompt",
+    "longDescription": "Consumer workflows for using Invompt through its hosted MCP service.",
+    "developerName": "Invompt",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://invompt.com",
+    "privacyPolicyURL": "https://invompt.com/privacy",
+    "termsOfServiceURL": "https://invompt.com/terms",
+    "defaultPrompt": [
+      "Create an invoice from this billing request.",
+      "Export my Invompt invoice as a PDF.",
+      "Check whether my Invompt connection is working."
+    ]
+  }
+}

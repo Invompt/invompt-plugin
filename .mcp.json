@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "invompt": {
+      "type": "http",
+      "url": "https://mcp.invompt.com/mcp"
+    }
+  }
+}

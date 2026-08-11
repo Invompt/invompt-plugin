@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "plugin": "invompt",
+  "version": "1.2.72",
+  "source": {
+    "publicRepository": "https://github.com/Invompt/invompt-plugin",
+    "canonicalHubCommit": "191134b3e5ee69abc707ad7a40b9a98a2f10b51c"
+  },
+  "files": {
+    ".codex-plugin/plugin.json": "202a3ae5f352fd45cc8fc1a8cc858b2264d7e79d5158807f66187a4465d3bf35",
+    ".mcp.json": "e8e5926d8c4676ff200b6ae694e1a1ef8642416422a96d08967930b6e00f2caf",
+    "LICENSE": "1dd8784117e091d9aba542e6ee0b657bd0e6e73bbb7e8820b5e63f106eb2d1a0",
+    "README.md": "99a5746b9902a72fc2220b0c3a7fa1cec00122adf343dfdecfbafedbb2ed7e71",
+    "SECURITY.md": "492988f514a51656613a808a2dfbb0ad150d73cbea4bfd9d7de3f59fef8ab08b",
+    "SUPPORT.md": "a132b3a8acd0cd214a0d0a6d825f0bdc777f90da975568d7b22b4e2915111887",
+    "skills/invompt-export/SKILL.md": "76d0ed71cd859fd3491d97d300d244a896714b66feebfecaa08035fbfc7d9f83",
+    "skills/invompt-export/agents/openai.yaml": "e8115369759816d4ceded6766d333d99ba65477bc0cd91e950964cbdc1c4fd5e",
+    "skills/invompt-export/scripts/export-core.mjs": "c4fe074ef16697304ba7fbbab3a4c399a22e703ec5c5a1d838c828cc259627bf",
+    "skills/invompt-export/scripts/export-pdf.mjs": "8737811be42ae36aabd32d24fdcfa7a25277df9b35859370454f567a03a86563",
+    "skills/invompt-export/scripts/invoke-export-core.mjs": "1663620ebac4f743939933f5cb9cfcfadcf62f4d8e184952e351f4a70fa70900",
+    "skills/invompt-export/scripts/invoke-export-pdf.mjs": "bed1429cc4d770966cbc3a033d29a8309ff647d5706bb92c00a4b522d8aaa843",
+    "skills/invompt-health/SKILL.md": "0d0815dab85cba9bd348a12de2f8ac9d4f3d64697fed3ae3f5d3e9b1ad63f3b0",
+    "skills/invompt-health/agents/openai.yaml": "5249ef5fa6f1a7e2cac61416f30b9c196d6b0ffed06d9b92b39332b83bce4de9",
+    "skills/invompt-invoice/SKILL.md": "a41c86c3ef0ad5ed58eb9e03bc998258167469e1891e8e0b71ed6c8975173bd1",
+    "skills/invompt-invoice/agents/openai.yaml": "cdee9f85926ceee6079a0d565bd4c737518ec336c8492db9b0c03498fd709dc6",
+    "skills/invompt-invoice/references/activation-evals.md": "437e4d19b592832220555ee4e76e5752bf8e3ba93dfe8ca86252e4c965da3c3a",
+    "skills/invompt-invoice/references/invoml-v1.md": "7434f9d8a82cba3bf32dd588bc918a64912528f9ebd410bb17ec5a382c6d92f7"
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Invompt MCP Health"
+  short_description: "Check the active Invompt MCP connection"
+  default_prompt: "Use $invompt-health to check whether the active Invompt MCP connection is healthy and report a safe host-native recovery action when it is not."

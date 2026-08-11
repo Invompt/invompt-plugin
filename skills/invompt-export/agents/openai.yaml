@@ -1,0 +1,4 @@
+interface:
+  display_name: "Invompt Export"
+  short_description: "Export an approved existing Invompt invoice as a local PDF file"
+  default_prompt: "Use $invompt-export to export an online Invompt invoice to a local PDF file."
