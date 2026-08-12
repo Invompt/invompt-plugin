@@ -1,16 +1,17 @@
 {
   "schemaVersion": 1,
   "plugin": "invompt",
-  "version": "1.2.72",
+  "version": "1.2.73",
   "source": {
     "publicRepository": "https://github.com/Invompt/invompt-plugin",
-    "canonicalHubCommit": "191134b3e5ee69abc707ad7a40b9a98a2f10b51c"
+    "canonicalHubCommit": "f1b519c29b1a0d50c704565860261c0a12bb9ae8"
   },
   "files": {
-    ".codex-plugin/plugin.json": "202a3ae5f352fd45cc8fc1a8cc858b2264d7e79d5158807f66187a4465d3bf35",
+    ".claude-plugin/plugin.json": "66ed01b45c73a009b4f6a97779b3ad1b7e83c87be027619f78b068f3fb2e278f",
+    ".codex-plugin/plugin.json": "9358b02a831bea494032b07e958f3c1e194a9fb2080f30c96e974434e2f1ee72",
     ".mcp.json": "e8e5926d8c4676ff200b6ae694e1a1ef8642416422a96d08967930b6e00f2caf",
     "LICENSE": "1dd8784117e091d9aba542e6ee0b657bd0e6e73bbb7e8820b5e63f106eb2d1a0",
-    "README.md": "99a5746b9902a72fc2220b0c3a7fa1cec00122adf343dfdecfbafedbb2ed7e71",
+    "README.md": "b2420de78a30ea5db1859f3c6cafac9c7a76258baa8dc5426bf7298bfe25d640",
     "SECURITY.md": "492988f514a51656613a808a2dfbb0ad150d73cbea4bfd9d7de3f59fef8ab08b",
     "SUPPORT.md": "a132b3a8acd0cd214a0d0a6d825f0bdc777f90da975568d7b22b4e2915111887",
     "skills/invompt-export/SKILL.md": "76d0ed71cd859fd3491d97d300d244a896714b66feebfecaa08035fbfc7d9f83",

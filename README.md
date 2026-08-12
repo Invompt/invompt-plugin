@@ -1,8 +1,8 @@
-# Invompt for Codex
+# Invompt agent plugin
 
-Invompt 1.2.72 provides three consumer workflows for Codex: create or manage billing documents, export an existing invoice as PDF, and check the hosted MCP connection.
+Invompt 1.2.73 provides three consumer workflows for Claude Code and supported Codex/OpenAI plugin surfaces: create or manage billing documents, export an existing invoice as PDF, and check the hosted MCP connection.
 
-The plugin connects only to `https://mcp.invompt.com/mcp` and delegates authentication to host-native OAuth. It contains no credentials, static authentication headers, loopback configuration, development agents, commands, or hooks.
+The shared repository contains separate, generated native manifests for Claude Code and Codex/OpenAI. It connects only to `https://mcp.invompt.com/mcp` and delegates authentication to host-native OAuth. It contains no credentials, static authentication headers, loopback configuration, development agents, commands, or hooks.
 
 - Website: https://invompt.com
 - Privacy: https://invompt.com/privacy
@@ -10,4 +10,4 @@ The plugin connects only to `https://mcp.invompt.com/mcp` and delegates authenti
 - Support: https://invompt.com/contact
 - Source: https://github.com/Invompt/invompt-plugin
 
-Install only from an Invompt-controlled listing or repository. Start a fresh Codex session after installation or update.
+Install only from an Invompt-controlled listing or repository. Start a fresh host session after installation or update.
