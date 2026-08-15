@@ -1,6 +1,6 @@
 {
   "name": "invompt",
-  "version": "1.2.73",
+  "version": "1.2.74",
   "description": "Invompt online invoicing workflows for invoices, exports, and connection health.",
   "author": {
     "name": "Invompt"
@@ -31,6 +31,9 @@
       "Create an invoice from this billing request.",
       "Export my Invompt invoice as a PDF.",
       "Check whether my Invompt connection is working."
-    ]
+    ],
+    "brandColor": "#6B8F71",
+    "logo": "./assets/brand/publication/invompt-dark-256.png",
+    "composerIcon": "./assets/brand/invompt-composer.svg"
   }
 }

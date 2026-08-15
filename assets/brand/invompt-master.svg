@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Invompt mark</title>
+  <desc id="desc">A crisp slab capital I in green on a dark square field.</desc>
+  <rect width="1024" height="1024" fill="#0C0D10"/>
+  <path fill="#6B8F71" d="M192 128h640v192H640v384h192v192H192V704h192V320H192z"/>
+</svg>
