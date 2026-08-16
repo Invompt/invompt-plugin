@@ -1,4 +1,4 @@
 interface:
   display_name: "Invompt Invoices"
-  short_description: "Create and manage invoices through the active Invompt MCP connection"
-  default_prompt: "Use $invompt-invoice to create or manage an Invompt billing document through the active MCP provider."
+  short_description: "Create and review billing documents"
+  default_prompt: "Use $invompt-invoice to create or manage an Invompt billing document."

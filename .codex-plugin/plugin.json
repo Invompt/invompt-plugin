@@ -1,7 +1,7 @@
 {
   "name": "invompt",
-  "version": "1.2.74",
-  "description": "Invompt online invoicing workflows for invoices, exports, and connection health.",
+  "version": "1.2.75",
+  "description": "Invompt helps you create, review, and revise billing documents in a conversation, then export an existing invoice as a PDF.",
   "author": {
     "name": "Invompt"
   },
@@ -16,8 +16,8 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Invompt",
-    "shortDescription": "Invoices with Invompt",
-    "longDescription": "Consumer workflows for using Invompt through its hosted MCP service.",
+    "shortDescription": "Create and review invoices.",
+    "longDescription": "Create or manage invoices, quotes, estimates, and pro formas from natural-language requests. Reuse saved clients and settings, inspect hosted review links, revise the selected document, and export an existing invoice as a PDF. You control document changes; Invompt does not send email or process payments.",
     "developerName": "Invompt",
     "category": "Productivity",
     "capabilities": [
@@ -28,9 +28,9 @@
     "privacyPolicyURL": "https://invompt.com/privacy",
     "termsOfServiceURL": "https://invompt.com/terms",
     "defaultPrompt": [
-      "Create an invoice from this billing request.",
-      "Export my Invompt invoice as a PDF.",
-      "Check whether my Invompt connection is working."
+      "Create a quote from this conversation. Ask for any missing billing details before saving it.",
+      "Find the selected invoice, show its current total and hosted review link, then help me review a proposed change.",
+      "Export an existing Invompt invoice as a PDF."
     ],
     "brandColor": "#6B8F71",
     "logo": "./assets/brand/publication/invompt-dark-256.png",

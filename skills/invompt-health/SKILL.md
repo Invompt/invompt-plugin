@@ -1,9 +1,7 @@
 ---
 name: invompt-health
 description: |
-  Check, diagnose, and safely report the active Invompt MCP connection. Use
-  when the user asks whether Invompt is connected, reachable, authenticated,
-  or healthy. Do not start a repository checkout or local runtime.
+  Check whether Invompt is connected, authenticated, reachable, or healthy. Use the active host connection and ping only; never inspect business data or start a local runtime.
 ---
 
 # Invompt MCP Health

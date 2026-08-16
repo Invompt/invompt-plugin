@@ -1,10 +1,7 @@
 ---
 name: invompt-export
 description: |
-  Export an existing online Invompt invoice as a PDF to an explicitly requested local path.
-  Trigger only for explicit English or Spanish requests to download, save, or export an
-  Invompt invoice as PDF. Do not use for invoice creation, editing, viewing, printing advice,
-  Markdown, arbitrary URLs, or silent post-create actions.
+  Export an existing online Invompt invoice as a PDF after the user explicitly asks to download or save it. Use the fresh hosted invoice link. Do not use it to create, edit, view, or send an invoice, take payment, or fetch an arbitrary URL.
 ---
 
 # Invompt Online PDF Export

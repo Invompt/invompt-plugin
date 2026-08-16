@@ -1,7 +1,7 @@
 {
   "name": "invompt",
-  "version": "1.2.74",
-  "description": "Invompt online invoicing workflows for invoices, exports, and connection health.",
+  "version": "1.2.75",
+  "description": "Invompt helps you create, review, and revise billing documents in a conversation, then export an existing invoice as a PDF.",
   "author": {
     "name": "Invompt"
   }

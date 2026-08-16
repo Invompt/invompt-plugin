@@ -1,11 +1,7 @@
 ---
 name: invompt-invoice
 description: |
-  Create or manage an Invompt invoice, quote, estimate, or pro forma from
-  natural-language intent in any language, including short follow-ups that
-  reuse earlier facts. Use for explicit billing-document requests across
-  Latin, Cyrillic, RTL, Indic, CJK, and Southeast Asian scripts. Do not use
-  for price or budgeting advice unless the user asks to create a document.
+  Create or manage an Invompt invoice, quote, estimate, or pro forma from a natural-language request. Use to create, find, review, revise, archive, or restore a billing document, or to create, find, revise, or archive a saved client. Do not use for general pricing advice, sending email, taking payment, or unrelated writing.
 ---
 
 # Invompt Invoice Workflow
