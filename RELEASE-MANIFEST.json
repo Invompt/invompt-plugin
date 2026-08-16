@@ -4,7 +4,7 @@
   "version": "1.2.75",
   "source": {
     "publicRepository": "https://github.com/Invompt/invompt-plugin",
-    "canonicalHubCommit": "edd31bf6afd51684b86790961d32626f0418ba8c",
+    "canonicalHubCommit": "e3705e4250b0bcd16bc1cfe2a98ed12b3638d75d",
     "brandMaster": {
       "path": "assets/brand/invompt-master.svg",
       "sha256": "14f33c26f36798d03dab97eb51985986940d9a73de015c4242ebdf89b9f6d05a"
