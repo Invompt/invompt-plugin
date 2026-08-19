@@ -1,7 +1,7 @@
 {
   "$schema": "https://catalog.msh.team/schemas/kimi.plugin.schema.json",
   "name": "invompt",
-  "version": "1.2.75",
+  "version": "1.2.76",
   "description": "Invompt helps you create, review, and revise billing documents in a conversation, then export an existing invoice as a PDF.",
   "author": {
     "name": "Invompt"
