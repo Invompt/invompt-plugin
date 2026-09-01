@@ -1,7 +1,7 @@
 ---
 name: invompt-invoice
 description: |
-  Create or manage an Invompt invoice, quote, estimate, or pro forma from a natural-language request. Use to create, find, review, revise, archive, or restore a billing document, or to create, find, revise, or archive a saved client. Do not use for general pricing advice, sending email, taking payment, or unrelated writing.
+  Create or manage an Invompt invoice, quote, estimate, or pro forma from a natural-language request. Use to create, find, review, revise, archive, or restore a billing document, create, find, revise, or archive a saved client, or list, inspect, preview, and explicitly save an existing invoice as a reusable template. Do not use for general pricing advice, sending email, taking payment, or unrelated writing.
 ---
 
 # Invompt Invoice Workflow
@@ -31,6 +31,8 @@ specification from the Web or search for an Invompt checkout.
 | Save or revise a client | Use `create_client` or `update_client` only after resolving duplicates and user intent. |
 | Archive a saved client | Confirm the target and authorization, then use `archive_client`. |
 | Find or read existing documents | Use `list_invoices` and `get_invoice` when exposed. |
+| Find or inspect reusable invoice templates | Use `list_invoice_templates` and `get_invoice_template` when exposed. |
+| Save an existing invoice as a reusable template | Use `preview_invoice_template_extraction`, show the exclusions, and call `save_invoice_as_template` only after explicit confirmation of the exact preview. |
 | Revise, translate, correct, or restyle an existing document | Use `update_invoice` when exposed. |
 | Renew an expired hosted link | Use `renew_invoice_link` when exposed. |
 | Archive an existing document | Confirm the target and authorization, then use `archive_invoice`. |
@@ -43,6 +45,31 @@ Treat live MCP tool and resource schemas as the final capability contract. Disco
 call-time authorization unless the server supplies explicit permission metadata. If a management
 tool is absent or rejects the current identity, report that capability or authentication gap
 without creating a duplicate or switching to another artifact tool.
+
+## Manage Reusable Invoice Templates
+
+Template application to invoice creation is not supported by this skill yet. Do not invent or pass
+`savedTemplateId`, and do not use a template to call `create_invoice` until the live schema and
+product contract explicitly support that workflow.
+
+- To find templates, use `list_invoice_templates` with only the live filter fields it exposes. Use
+  `get_invoice_template` for a selected template when the user asks to inspect its details.
+- To save an existing invoice as a template, identify the invoice and current revision first, then
+  call `preview_invoice_template_extraction` as a read-only step. `includeLineItems` defaults to
+  `false`; set it to `true` only when the user explicitly asks to include line items.
+- The preview is the only source for the proposed template body. Never reuse raw `get_invoice`
+  InvoML as a template, silently copy an invoice body, or infer that an existing template ID is
+  reusable. Show the proposed name, type, included fields, excluded fields with reasons, and the
+  projection checksum before asking for confirmation.
+- Use the safe preset unless the live schema documents a narrower supported choice. It excludes
+  issuer and recipient/client parties, payment data, free-form notes and sections, and rendered
+  HTML, CSS, or assets. Only validated semantic defaults (for example currency, locale, tax, or
+  date format) may be retained when the preview explicitly reports them.
+- Call `save_invoice_as_template` only after the user explicitly confirms the exact preview
+  checksum, name, and options. Never silently save, apply, archive, or replace a template. If the
+  save result is ambiguous and the live schema has no idempotent retry control, stop and report it.
+- Return the saved template ID, version, and name when supplied. Do not claim invoice creation or
+  template application linkage; that capability is not part of this contract yet.
 
 ## Create A Document
 
