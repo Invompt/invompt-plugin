@@ -105,6 +105,12 @@ facts rather than inserting placeholders.
 
 ## MCP Boundary
 
+Quotes and estimates are typed InvoML documents handled by the invoice-named MCP tools. A pro
+forma uses `meta.documentType: "quote"`; the product does not expose separate type-specific quote,
+estimate, or pro-forma tools, Web generators, selectors, or first-class editor fields. `list_invoices` and `get_invoice` summaries are
+invoice-shaped, so `documentType` and `expiryDate` require canonical `invomlContent` when that
+field is returned.
+
 `clientId`, `idempotencyKey`, `expectedVersion`, `numberCorrection`, and template overrides are
 tool inputs, not InvoML fields. Send only inputs present in the discovered live tool schema; the
 configured runtime may expose a smaller surface than the source provenance contract.

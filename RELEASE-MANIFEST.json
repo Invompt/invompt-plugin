@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "plugin": "invompt",
-  "version": "1.2.80",
+  "version": "1.2.81",
   "installPublicationState": "release-artifact",
   "source": {
     "publicRepository": "https://github.com/Invompt/invompt-plugin",
-    "canonicalHubCommit": "1205a5e277aee2d9a44f557a0c97a478b9886593",
+    "canonicalHubCommit": "53b23e50c860f1b481cd07dd756b9a9e02a40476",
     "brandMaster": {
       "path": "assets/brand/invompt-master.svg",
       "sha256": "14f33c26f36798d03dab97eb51985986940d9a73de015c4242ebdf89b9f6d05a"
@@ -13,13 +13,13 @@
   },
   "files": {
     ".claude-plugin/marketplace.json": "942e5f30897c842c07c8fd2dbf33002efbb207e53f944c083223dde725efc3ef",
-    ".claude-plugin/plugin.json": "beafb50fae94bc802602fd8c17d139e6e062fd006d5232b012d1a3e770df466e",
-    ".codex-plugin/plugin.json": "360d9e1802e60aa69917b75395120b342029a45961cdd19352cc029cb419d474",
+    ".claude-plugin/plugin.json": "6cba1952c6d8311316377d6cdb716588a2ed6d266f8a6fbc7ff691a8c99c89ff",
+    ".codex-plugin/plugin.json": "157cc7ebdacaadd07096ff29d2b7c1bcb1baf5ddd82056bde7f03c2ea583bed5",
     ".github/CODEOWNERS": "56ec409c04452c822a8888e4e5ed4912aff882e5d121c62feca51d1ee00212cd",
     ".github/workflows/public-readme-policy.yml": "6ae2f985ed335a2e7e03f5856c74439f6fd596027940ad398515af575a891276",
-    ".kimi-plugin/plugin.json": "7531dc00933e2576158681a67977a2bb58bd5ca4e9bf12727e9e75bc85a39858",
+    ".kimi-plugin/plugin.json": "ed46cd168ead42a98453f53109e4b85b40cc7f3b8ba3830bd80dd7fb0021e3d3",
     ".mcp.json": "e8e5926d8c4676ff200b6ae694e1a1ef8642416422a96d08967930b6e00f2caf",
-    "INSTALL.md": "2fdbf1d355dec43d6e2edd2b07d39d83e4615acc2b3b39a335c98b589dacb74d",
+    "INSTALL.md": "12777b6844ac7402df3d185b8f214dfcc536f8d4ae18cf9f60b32920a308714f",
     "LICENSE": "1dd8784117e091d9aba542e6ee0b657bd0e6e73bbb7e8820b5e63f106eb2d1a0",
     "README.md": "688d7ec36999d0246d80b3655f3c2b8ded0fdb2358342940c6d8282b27a5777c",
     "SECURITY.md": "492988f514a51656613a808a2dfbb0ad150d73cbea4bfd9d7de3f59fef8ab08b",
@@ -36,7 +36,7 @@
     "assets/brand/publication/invompt-light-256.png": "df6db74412a8347560680bb4842de98e3661e141a717ed299da285974846a6b1",
     "assets/brand/publication/invompt-maskable-dark-1024.png": "315a18a20f1dd6615626b958c994ceea7156a872487cc7defbf724d0276e62f8",
     "assets/brand/publication/invompt-maskable-light-1024.png": "e06cd56dca6af18178def26213ee10be87687176ddc9d5e845465048a7e77dab",
-    "kimi.plugin.json": "7531dc00933e2576158681a67977a2bb58bd5ca4e9bf12727e9e75bc85a39858",
+    "kimi.plugin.json": "ed46cd168ead42a98453f53109e4b85b40cc7f3b8ba3830bd80dd7fb0021e3d3",
     "scripts/validate-public-readmes.mjs": "bb80484d314ce740f796c14a065aa4601cadd9e018acb2335298c1b533e67e97",
     "skills/invompt-export/SKILL.md": "1170e9f328b5d4b44fe14389ec43540a6fe759b8a2161aeca391e7a9f6d0dd87",
     "skills/invompt-export/agents/openai.yaml": "244ef5438a8af4289db02d4da9960c9e6f8f1c2a63f168c9c440d4ecc13c5656",
@@ -44,11 +44,11 @@
     "skills/invompt-export/scripts/export-pdf.mjs": "8737811be42ae36aabd32d24fdcfa7a25277df9b35859370454f567a03a86563",
     "skills/invompt-export/scripts/invoke-export-core.mjs": "1663620ebac4f743939933f5cb9cfcfadcf62f4d8e184952e351f4a70fa70900",
     "skills/invompt-export/scripts/invoke-export-pdf.mjs": "bed1429cc4d770966cbc3a033d29a8309ff647d5706bb92c00a4b522d8aaa843",
-    "skills/invompt-health/SKILL.md": "ad8638195312399bd8ca659bc3eed0aef1765563bbc04bd882765d4112ba601c",
+    "skills/invompt-health/SKILL.md": "c4bb696873fd8cb38e4a3ab7061d099a42372d694f36c8f9d26cad5f8a823afb",
     "skills/invompt-health/agents/openai.yaml": "0456bc4cd37a88783c978d5b4a9031648fe2a620ae03a4f84d85ea37fb16483c",
-    "skills/invompt-invoice/SKILL.md": "67f47173b667fb509ac98055af4a874199f93ad26a9c35c33c87dd25701c4485",
+    "skills/invompt-invoice/SKILL.md": "89c625ffa6d442d95ec5814ed78b7961853856c2a1a52770546df56aff6fbfc0",
     "skills/invompt-invoice/agents/openai.yaml": "35a8fae154ad5db33edceb9f5484b8428b38eea5cf62a4cb8c0c66ea219bc41a",
-    "skills/invompt-invoice/references/activation-evals.md": "437e4d19b592832220555ee4e76e5752bf8e3ba93dfe8ca86252e4c965da3c3a",
-    "skills/invompt-invoice/references/invoml-v1.md": "7434f9d8a82cba3bf32dd588bc918a64912528f9ebd410bb17ec5a382c6d92f7"
+    "skills/invompt-invoice/references/activation-evals.md": "cea09eb5a6e1b46a2c2b014ac4efc8eb71330416f55adb6263158546e991b74e",
+    "skills/invompt-invoice/references/invoml-v1.md": "27c08b9f01911ff8afa70f5e1e19d2c1f5463c309688638db8ad525f0d095e69"
   }
 }

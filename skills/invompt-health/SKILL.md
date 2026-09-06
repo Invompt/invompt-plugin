@@ -28,6 +28,11 @@ health check. Do not call mutations. `ping` is required health evidence and is
 not a substitute for the separate user-acceptance test of a real read-only
 business operation.
 
+Health is intentionally not a creation preflight. A successful `ping` does not
+authorize `create_invoice`, and an advertised tool list does not prove
+call-time authorization. Creation requests must use the invoice skill's
+one-pass effective-provider and required-tool preflight instead.
+
 ## Classify the result
 
 Use the most specific leading summary:
@@ -35,6 +40,7 @@ Use the most specific leading summary:
 - `MCP connected and healthy`
 - `MCP connected, but authentication is required`
 - `MCP connected but a capability check failed`
+- `MCP connected but the requested capability is unavailable`
 - `MCP is not configured`
 - `MCP is unreachable`
 

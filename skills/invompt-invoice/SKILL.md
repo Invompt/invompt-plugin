@@ -1,7 +1,7 @@
 ---
 name: invompt-invoice
 description: |
-  Create or manage an Invompt invoice, quote, estimate, or pro forma from a natural-language request. Use to create, find, review, revise, archive, or restore a billing document, create, find, revise, or archive a saved client, or list, inspect, preview, and explicitly save an existing invoice as a reusable template. Do not use for general pricing advice, sending email, taking payment, or unrelated writing.
+  Create or manage an Invompt invoice from a natural-language request. Quote and estimate documents are typed InvoML documents handled by the invoice-named tools; a pro forma uses documentType quote. Use to create, find, review, revise, archive, or restore a billing document, create, find, revise, or archive a saved client, or list, inspect, preview, and explicitly save an existing invoice as a reusable template. List and get summaries are invoice-shaped; documentType and expiryDate require canonical invomlContent. There are no separate type-specific quote, estimate, or pro-forma tools, Web generators, selectors, or first-class editor fields. Do not use for general pricing advice, sending email, taking payment, or unrelated writing.
 ---
 
 # Invompt Invoice Workflow
@@ -19,6 +19,12 @@ offline drafting baseline shipped in the plugin. The connected server's live too
 the final capability contract. Read `invompt://spec/invoml/v1` only when the user requests an
 advanced field outside the portable baseline or validation indicates drift. Do not download a
 specification from the Web or search for an Invompt checkout.
+
+Quotes and estimates are typed InvoML documents created through the invoice-named MCP tools. A pro
+forma is represented with `meta.documentType: "quote"`; there are no separate type-specific quote,
+estimate, or pro-forma tools, Web generators, selectors, or first-class editor fields.
+`list_invoices` and `get_invoice` return invoice-shaped summaries; read `documentType` or
+`expiryDate` from canonical `invomlContent` when it is supplied.
 
 ## Route The Request
 
@@ -73,6 +79,33 @@ product contract explicitly support that workflow.
 
 ## Create A Document
 
+### One-pass creation preflight
+
+Before asking for billing details, reading account defaults, or drafting any create request, make
+one effective-provider preflight in the active host:
+
+1. Use the host's MCP provenance and one `tools/list` result to identify the effective Invompt
+   provider and its advertised `create_invoice` tool. Discovery happens once for this request; do
+   not loop, retry discovery, or use `ping` as a creation preflight.
+2. If no effective Invompt provider is present, stop and report `MCP is not configured`.
+3. If the effective Codex provider is present but reports `not_logged_in`, an OAuth-required
+   challenge, or an equivalent unauthenticated state, stop before asking billing questions or
+   drafting. Report `MCP connected, but authentication is required`, then give this exact safe
+   recovery: run `codex mcp login invompt`, complete browser
+   authorization without sharing secrets, then start a genuinely fresh Codex task because open
+   tasks do not hot-reload auth. Do not make a mutation, draft, or speculative tool call before
+   recovery. On another host, follow only that host's native authentication action and require a
+   fresh task when its provider says the current task cannot refresh credentials.
+4. If the provider does not expose a reliable authenticated state, stop before drafting and report
+   that authentication could not be verified. Do not infer authorization from tool discovery.
+5. Only after authentication is known to be valid, if `create_invoice` is absent, stop and report
+   `MCP connected but the create capability is unavailable`. Authentication takes precedence when
+   both the unauthenticated state and an empty tool list are observed. Do not fall back to another
+   provider, endpoint, static header, API key, local runtime, or repository script.
+6. Continue only when the provider is effective, authenticated, and advertises `create_invoice`.
+   Use its live input schema for the request. Do not repeat the preflight after a clarification;
+   the already resolved provider and tool remain authoritative for this request.
+
 1. Start from the bundled InvoML reference. If `invompt://docs/getting-started` is advertised,
    read it once per session only when the live schemas indicate workflow changes.
    A missing resource is not a blocker when the required tool schema is available.
@@ -90,9 +123,9 @@ product contract explicitly support that workflow.
    - call `create_client` only after the user chooses to save, using an idempotency key only when
      its live schema exposes or requires one, then pass the returned `clientId`;
    - never create a saved client silently as a side effect of `create_invoice`.
-5. Ask one consolidated question only when a calculation-critical value is genuinely missing,
-   such as currency, quantity, or price. Optional identity, tax, address, contact, payment, and
-   notes fields never block creation.
+5. Ask one consolidated question only when a required or ambiguous value is genuinely missing,
+   such as the final authored number, currency, quantity, price, or the year in a validity date.
+   Optional identity, tax, address, contact, payment, and notes fields never block creation.
 6. Draft sparse valid InvoML from the bundled reference and the live schema:
    - preserve the user's language and use a BCP 47 `meta.locale` when known;
    - use the current local date when no issue date is provided;
