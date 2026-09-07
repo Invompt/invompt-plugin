@@ -1,7 +1,7 @@
 {
   "name": "invompt",
-  "version": "1.2.81",
-  "description": "Invompt helps you create, review, and revise billing documents in a conversation, then export an existing invoice as a PDF.",
+  "version": "1.2.82",
+  "description": "Invompt helps you create, review, revise, and deliver billing documents from a conversation.",
   "author": {
     "name": "Invompt"
   }

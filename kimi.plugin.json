@@ -1,8 +1,8 @@
 {
   "$schema": "https://catalog.msh.team/schemas/kimi.plugin.schema.json",
   "name": "invompt",
-  "version": "1.2.81",
-  "description": "Invompt helps you create, review, and revise billing documents in a conversation, then export an existing invoice as a PDF.",
+  "version": "1.2.82",
+  "description": "Invompt helps you create, review, revise, and deliver billing documents from a conversation.",
   "author": {
     "name": "Invompt"
   },
@@ -24,7 +24,7 @@
   "interface": {
     "displayName": "Invompt",
     "shortDescription": "Create and review invoices.",
-    "longDescription": "Create or manage invoices from natural-language requests. Use the same workflow for quotes and estimates; a pro forma is represented as a quote. Reuse saved clients and settings, inspect hosted review links, revise the selected document, and export an existing invoice as a PDF. You control document changes; Invompt does not send email or process payments.",
+    "longDescription": "Create or manage invoices from natural-language requests. Use the same workflow for quotes and estimates; a pro forma is represented as a quote. Reuse saved clients and settings, inspect hosted review links, revise the selected document, export an existing invoice as a PDF, or email the selected document after confirming the recipient. You control every document change and delivery; Invompt does not process payments.",
     "developerName": "Invompt",
     "websiteURL": "https://invompt.com"
   }

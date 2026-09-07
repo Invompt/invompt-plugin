@@ -1,25 +1,25 @@
 {
   "schemaVersion": 1,
   "plugin": "invompt",
-  "version": "1.2.81",
+  "version": "1.2.82",
   "installPublicationState": "release-artifact",
   "source": {
     "publicRepository": "https://github.com/Invompt/invompt-plugin",
-    "canonicalHubCommit": "53b23e50c860f1b481cd07dd756b9a9e02a40476",
+    "canonicalHubCommit": "bc0cbf9ad301c63594b295a4bc3261cbb642028d",
     "brandMaster": {
       "path": "assets/brand/invompt-master.svg",
       "sha256": "14f33c26f36798d03dab97eb51985986940d9a73de015c4242ebdf89b9f6d05a"
     }
   },
   "files": {
-    ".claude-plugin/marketplace.json": "942e5f30897c842c07c8fd2dbf33002efbb207e53f944c083223dde725efc3ef",
-    ".claude-plugin/plugin.json": "6cba1952c6d8311316377d6cdb716588a2ed6d266f8a6fbc7ff691a8c99c89ff",
-    ".codex-plugin/plugin.json": "157cc7ebdacaadd07096ff29d2b7c1bcb1baf5ddd82056bde7f03c2ea583bed5",
+    ".claude-plugin/marketplace.json": "a939e1887c71ac51203d4fa3e073e395853458d9655d929abb7f5cfa4d2434e7",
+    ".claude-plugin/plugin.json": "8f99fa1299786fa04161ffcc1eaff7aa192691c828a7ed52ce2c0f40bce4ade7",
+    ".codex-plugin/plugin.json": "a70e4d5623e6d83dfb3f34c1f4135eeaec9890a1df0412a8015a2bcd279b2f9c",
     ".github/CODEOWNERS": "56ec409c04452c822a8888e4e5ed4912aff882e5d121c62feca51d1ee00212cd",
     ".github/workflows/public-readme-policy.yml": "6ae2f985ed335a2e7e03f5856c74439f6fd596027940ad398515af575a891276",
-    ".kimi-plugin/plugin.json": "ed46cd168ead42a98453f53109e4b85b40cc7f3b8ba3830bd80dd7fb0021e3d3",
+    ".kimi-plugin/plugin.json": "dfdd1e51e3b117f6ea8d5f3dba156c70f6be0496c44c202784e804f1303dece0",
     ".mcp.json": "e8e5926d8c4676ff200b6ae694e1a1ef8642416422a96d08967930b6e00f2caf",
-    "INSTALL.md": "12777b6844ac7402df3d185b8f214dfcc536f8d4ae18cf9f60b32920a308714f",
+    "INSTALL.md": "a57cdea6d4257be55f97cb245cd693b66fe31af2829deb372f1954dd040c478e",
     "LICENSE": "1dd8784117e091d9aba542e6ee0b657bd0e6e73bbb7e8820b5e63f106eb2d1a0",
     "README.md": "688d7ec36999d0246d80b3655f3c2b8ded0fdb2358342940c6d8282b27a5777c",
     "SECURITY.md": "492988f514a51656613a808a2dfbb0ad150d73cbea4bfd9d7de3f59fef8ab08b",
@@ -36,7 +36,7 @@
     "assets/brand/publication/invompt-light-256.png": "df6db74412a8347560680bb4842de98e3661e141a717ed299da285974846a6b1",
     "assets/brand/publication/invompt-maskable-dark-1024.png": "315a18a20f1dd6615626b958c994ceea7156a872487cc7defbf724d0276e62f8",
     "assets/brand/publication/invompt-maskable-light-1024.png": "e06cd56dca6af18178def26213ee10be87687176ddc9d5e845465048a7e77dab",
-    "kimi.plugin.json": "ed46cd168ead42a98453f53109e4b85b40cc7f3b8ba3830bd80dd7fb0021e3d3",
+    "kimi.plugin.json": "dfdd1e51e3b117f6ea8d5f3dba156c70f6be0496c44c202784e804f1303dece0",
     "scripts/validate-public-readmes.mjs": "bb80484d314ce740f796c14a065aa4601cadd9e018acb2335298c1b533e67e97",
     "skills/invompt-export/SKILL.md": "1170e9f328b5d4b44fe14389ec43540a6fe759b8a2161aeca391e7a9f6d0dd87",
     "skills/invompt-export/agents/openai.yaml": "244ef5438a8af4289db02d4da9960c9e6f8f1c2a63f168c9c440d4ecc13c5656",
@@ -46,7 +46,7 @@
     "skills/invompt-export/scripts/invoke-export-pdf.mjs": "bed1429cc4d770966cbc3a033d29a8309ff647d5706bb92c00a4b522d8aaa843",
     "skills/invompt-health/SKILL.md": "c4bb696873fd8cb38e4a3ab7061d099a42372d694f36c8f9d26cad5f8a823afb",
     "skills/invompt-health/agents/openai.yaml": "0456bc4cd37a88783c978d5b4a9031648fe2a620ae03a4f84d85ea37fb16483c",
-    "skills/invompt-invoice/SKILL.md": "89c625ffa6d442d95ec5814ed78b7961853856c2a1a52770546df56aff6fbfc0",
+    "skills/invompt-invoice/SKILL.md": "c520af4a22788aa0412cb297349cfd545e4a2732ec81916e695494c72bf53395",
     "skills/invompt-invoice/agents/openai.yaml": "35a8fae154ad5db33edceb9f5484b8428b38eea5cf62a4cb8c0c66ea219bc41a",
     "skills/invompt-invoice/references/activation-evals.md": "cea09eb5a6e1b46a2c2b014ac4efc8eb71330416f55adb6263158546e991b74e",
     "skills/invompt-invoice/references/invoml-v1.md": "27c08b9f01911ff8afa70f5e1e19d2c1f5463c309688638db8ad525f0d095e69"
