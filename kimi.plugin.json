@@ -1,7 +1,7 @@
 {
   "$schema": "https://catalog.msh.team/schemas/kimi.plugin.schema.json",
   "name": "invompt",
-  "version": "1.2.82",
+  "version": "1.2.83",
   "description": "Invompt helps you create, review, revise, and deliver billing documents from a conversation.",
   "author": {
     "name": "Invompt"

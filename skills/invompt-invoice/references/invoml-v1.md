@@ -146,9 +146,10 @@ live runtime schema and advertised InvoML resource always win. Documents still u
 `"$invoml": "1.0"`.
 
 The 2026-08-05 release checkpoint preserves the then-current `invompt-mcp@0.10.0` and InvoML
-alpha.21 state as history. Current public distribution is `invompt-mcp@0.10.3` and unscoped
-`invoml@1.0.0-alpha.23` on the `next` dist-tag. The product candidate remains on scoped/vendored
-alpha.20; this bundled snapshot is not silently promoted by an independent package publication.
+alpha.21 state as history. As verified on 2026-09-08, current public distribution is
+`invompt-mcp@0.11.8` and unscoped `invoml@1.0.0-alpha.25` on the `next` dist-tag. The product
+candidate remains on scoped/vendored alpha.20; this bundled snapshot is not silently promoted by
+an independent package publication.
 
 When the package or served v1 resource changes, maintainers must compare the normative spec, public
 types, product prompt contract, and MCP create/update schemas; update this compact reference and
