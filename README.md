@@ -2,13 +2,23 @@
 
 <h1>Invompt</h1>
 
-<p>Invoices and quotes, shaped in conversation.</p>
+<p>Turn AI-host work into invoices you review before send. Continue anonymously or OAuth via hosted MCP.</p>
 
-<p><a href="https://invompt.com">Website</a> · <a href="https://invompt.com/install">Install</a> · <a href="https://github.com/Invompt/invompt-plugin">Source</a></p>
+<p>
+  <a href="https://mcp.invompt.com/mcp">Hosted MCP</a> |
+  <a href="https://www.invompt.com">www.invompt.com</a> |
+  <a href="https://glama.ai/mcp/connectors/com.invompt/invompt">Registry com.invompt/invompt</a> |
+  <a href="https://wellknown.network/agents/invompt-mcp">Wellknown</a> |
+  <a href="https://github.com/Invompt/invompt-plugin">Source</a>
+</p>
 
 </div>
 
-Invompt helps you turn a natural-language request into a billing document you can review and refine.
+> **Start here:** Continue anonymously |
+> [`https://mcp.invompt.com/mcp`](https://mcp.invompt.com/mcp) | review-before-send
+
+Invompt helps you turn a natural-language request into a billing document you
+review before send.
 
 ## What you can do
 
@@ -16,23 +26,31 @@ Invompt helps you turn a natural-language request into a billing document you ca
 - Ask for missing billing details before saving a document.
 - Reuse saved clients and settings when preparing a new document.
 - Review a hosted link and revise the selected document.
-- Export an existing invoice as a PDF when you ask.
 
 ## Install
 
-1. Open [invompt.com/install](https://invompt.com/install).
-2. Follow the instructions for your AI host.
-3. Return to your host and start using Invompt.
+1. Prefer hosted MCP: open [`https://mcp.invompt.com/mcp`](https://mcp.invompt.com/mcp)
+   from your AI host and Continue anonymously (or OAuth).
+2. Or follow host-specific steps at [invompt.com/install](https://invompt.com/install).
+3. Return to your host and start using Invompt. Review before send.
+
+Registry: [`com.invompt/invompt`](https://glama.ai/mcp/connectors/com.invompt/invompt).
+Agent card: [Wellknown](https://wellknown.network/agents/invompt-mcp).
 
 ## Security
 
-Sign-in is handled by your AI host. Never share passwords, credentials, or private links in chat.
+Sign-in is handled by your AI host / the hosted MCP connection. Never share
+passwords, credentials, or private links in chat.
 
 ## Resources
 
+- [Hosted MCP](https://mcp.invompt.com/mcp)
+- [www.invompt.com](https://www.invompt.com)
 - [Installation guide](https://invompt.com/install)
-- [Privacy](https://invompt.com/privacy)
-- [Support](https://invompt.com/contact)
+- [Registry `com.invompt/invompt`](https://glama.ai/mcp/connectors/com.invompt/invompt)
+- [Wellknown agent](https://wellknown.network/agents/invompt-mcp)
+- [Privacy](https://www.invompt.com/privacy)
+- [Support](https://www.invompt.com/contact)
 - [Source repository](https://github.com/Invompt/invompt-plugin)
 
 ## License
