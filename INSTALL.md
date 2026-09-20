@@ -1,5 +1,7 @@
 # Install Invompt
 
+> **Product path:** Continue anonymously at [`https://mcp.invompt.com/mcp`](https://mcp.invompt.com/mcp), then review before send. Registry `com.invompt/invompt`. Remote MCP hosts should offer Continue anonymously (not OAuth-only).
+
 Identify the AI app you are running in and use one matching section below. If you cannot identify it, show the user the available apps and ask which one they use.
 
 ## Claude Code
@@ -58,7 +60,7 @@ Add the Invompt MCP connection with these steps:
 1. Open Settings → Connectors → Add custom connector.
 2. Enter name Invompt and endpoint https://mcp.invompt.com/mcp.
 
-Start login with: Select the host OAuth option and connect.
+Start login with: Prefer Continue anonymously when offered; otherwise use host OAuth and connect.
 
 Guide me through signing in to Invompt in the browser and wait until I finish. Tell me to restart or refresh Claude Desktop. In the fresh session, verify that Invompt works with a read-only `list_invoices` call.
 
@@ -74,7 +76,7 @@ Add the Invompt MCP connection with these steps:
 1. Enable Developer Mode and open Settings → Apps → Create.
 2. Enter name Invompt and endpoint https://mcp.invompt.com/mcp.
 
-Start login with: Select OAuth, create the app, and scan tools only after the host shows the expected endpoint.
+Start login with: Prefer Continue anonymously when offered; otherwise Select OAuth, create the app, and scan tools only after the host shows the expected endpoint.
 
 Guide me through signing in to Invompt in the browser and wait until I finish. Tell me to restart or refresh ChatGPT. In the fresh session, verify that Invompt works with a read-only `list_invoices` call.
 
@@ -89,7 +91,7 @@ Set up Invompt for me in Cursor.
 Add the Invompt MCP connection with these steps:
 1. In the project, show the proposed .cursor/mcp.json change before writing this exact entry: {"mcpServers":{"invompt":{"type":"http","url":"https://mcp.invompt.com/mcp"}}}.
 
-Start login with: Enable the Invompt server and choose the host-native login prompt.
+Start login with: Enable the Invompt server and Continue anonymously when offered (else host-native login).
 
 Guide me through signing in to Invompt in the browser and wait until I finish. Tell me to restart or refresh Cursor. In the fresh session, verify that Invompt works with a read-only `list_invoices` call.
 
@@ -105,7 +107,7 @@ Add the Invompt MCP connection with these steps:
 1. Open Command Palette → MCP: Add Server → HTTP.
 2. Enter name invompt and endpoint https://mcp.invompt.com/mcp.
 
-Start login with: Start the server and accept the host-native OAuth/URL-handler handoff if shown.
+Start login with: Start the server; Continue anonymously when offered, else accept host-native OAuth/URL-handler handoff.
 
 Guide me through signing in to Invompt in the browser and wait until I finish. Tell me to restart or refresh VS Code / GitHub Copilot. In the fresh session, verify that Invompt works with a read-only `list_invoices` call.
 

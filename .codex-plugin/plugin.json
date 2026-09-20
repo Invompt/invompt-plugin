@@ -1,7 +1,7 @@
 {
   "name": "invompt",
   "version": "1.2.83",
-  "description": "Invompt helps you create, review, revise, and deliver billing documents from a conversation.",
+  "description": "Continue anonymously via hosted MCP (mcp.invompt.com); review before send.",
   "author": {
     "name": "Invompt"
   },
@@ -10,14 +10,14 @@
   "keywords": [
     "invompt",
     "invoicing",
-    "pdf-export"
+    "hosted-mcp"
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Invompt",
-    "shortDescription": "Create and review invoices.",
-    "longDescription": "Create or manage invoices from natural-language requests. Use the same workflow for quotes and estimates; a pro forma is represented as a quote. Reuse saved clients and settings, inspect hosted review links, revise the selected document, export an existing invoice as a PDF, or email the selected document after confirming the recipient. You control every document change and delivery; Invompt does not process payments.",
+    "shortDescription": "Hosted MCP: Continue anonymously; review before send.",
+    "longDescription": "Connect via hosted MCP at https://mcp.invompt.com/mcp - Continue anonymously or OAuth. Create or revise invoices, quotes, and estimates from conversation; review before send. Registry com.invompt/invompt. You control every delivery; Invompt does not process payments.",
     "developerName": "Invompt",
     "category": "Productivity",
     "capabilities": [
@@ -29,7 +29,7 @@
     "termsOfServiceURL": "https://invompt.com/terms",
     "defaultPrompt": [
       "Create a quote from this conversation. Ask for any missing billing details before saving it.",
-      "Export an existing Invompt invoice as a PDF.",
+      "Review the selected Invompt invoice before send.",
       "Email the selected document after I confirm the recipient."
     ],
     "brandColor": "#6B8F71",

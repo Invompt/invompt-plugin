@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "invompt",
-  "description": "Invompt helps you create, review, revise, and deliver billing documents from a conversation.",
+  "description": "Continue anonymously via hosted MCP (mcp.invompt.com); review before send.",
   "owner": {
     "name": "Invompt"
   },
@@ -9,7 +9,7 @@
     {
       "name": "invompt",
       "source": "./",
-      "description": "Invompt helps you create, review, revise, and deliver billing documents from a conversation."
+      "description": "Continue anonymously via hosted MCP (mcp.invompt.com); review before send."
     }
   ]
 }
