@@ -1,7 +1,7 @@
 {
   "name": "invompt",
-  "version": "1.2.83",
-  "description": "Continue anonymously via hosted MCP (mcp.invompt.com); review before send.",
+  "version": "1.2.84",
+  "description": "Create invoices from your AI assistant and review them before sending.",
   "author": {
     "name": "Invompt"
   },
@@ -10,14 +10,14 @@
   "keywords": [
     "invompt",
     "invoicing",
-    "hosted-mcp"
+    "pdf-export"
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Invompt",
-    "shortDescription": "Hosted MCP: Continue anonymously; review before send.",
-    "longDescription": "Connect via hosted MCP at https://mcp.invompt.com/mcp - Continue anonymously or OAuth. Create or revise invoices, quotes, and estimates from conversation; review before send. Registry com.invompt/invompt. You control every delivery; Invompt does not process payments.",
+    "shortDescription": "Create and review invoices.",
+    "longDescription": "Create invoices from your AI assistant and review them before sending. Start without creating an account. Create one later and keep all your invoices. Use the same workflow for quotes and estimates; a pro forma is represented as a quote. Reuse saved clients and settings, inspect hosted review links, revise the selected document, export an existing invoice as a PDF, or email the selected document after confirming the recipient. You control every document change and delivery; Invompt does not process payments.",
     "developerName": "Invompt",
     "category": "Productivity",
     "capabilities": [
@@ -29,7 +29,7 @@
     "termsOfServiceURL": "https://invompt.com/terms",
     "defaultPrompt": [
       "Create a quote from this conversation. Ask for any missing billing details before saving it.",
-      "Review the selected Invompt invoice before send.",
+      "Export an existing Invompt invoice as a PDF.",
       "Email the selected document after I confirm the recipient."
     ],
     "brandColor": "#6B8F71",

@@ -1,7 +1,7 @@
 {
   "name": "invompt",
-  "version": "1.2.83",
-  "description": "Continue anonymously via hosted MCP (mcp.invompt.com); review before send.",
+  "version": "1.2.84",
+  "description": "Create invoices from your AI assistant and review them before sending.",
   "author": {
     "name": "Invompt"
   }

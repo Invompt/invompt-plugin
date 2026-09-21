@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "invompt",
-  "description": "Continue anonymously via hosted MCP (mcp.invompt.com); review before send.",
+  "description": "Create invoices from your AI assistant and review them before sending.",
   "owner": {
     "name": "Invompt"
   },
@@ -9,7 +9,7 @@
     {
       "name": "invompt",
       "source": "./",
-      "description": "Continue anonymously via hosted MCP (mcp.invompt.com); review before send."
+      "description": "Create invoices from your AI assistant and review them before sending."
     }
   ]
 }
