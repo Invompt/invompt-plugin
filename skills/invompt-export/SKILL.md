@@ -1,7 +1,7 @@
 ---
 name: invompt-export
 description: |
-  Export an existing online Invompt invoice as a PDF after the user explicitly asks to download or save it. Use the fresh hosted invoice link. Do not use it to create, edit, view, or send an invoice, take payment, or fetch an arbitrary URL.
+  Export an existing online Invompt invoice as a local PDF only when the user explicitly asks the assistant to save a local PDF file or gives a local destination. Use the fresh hosted invoice link. Generic requests to get, download, export, or save as PDF without explicit local-file intent belong to invompt-invoice, which returns the hosted link for browser download. Do not use it to create, edit, view, or send an invoice, take payment, or fetch an arbitrary URL.
 ---
 
 # Invompt Online PDF Export
@@ -10,11 +10,21 @@ This is the sole explicit read-only PDF GET and local-filesystem exception in th
 workflow. The Web product remains the only invoice renderer and the MCP server remains
 business-operation-only.
 
-Use this skill only when the user explicitly asks to save, download, or export an existing
-Invompt invoice to a local PDF file. Examples include “Export invoice IV00052 as PDF into
+Use this skill only when the user explicitly asks to save an existing Invompt invoice to a local
+PDF file or provides a local destination. Examples include “Export invoice IV00052 as PDF into
 `./exports`” and “Guarda la factura IV00052 como PDF en `./exports`”. Do not trigger for “show
-me the invoice”, “create an invoice”, “print this”, “make a Markdown copy”, or a request that
-only contains a URL.
+me the invoice”, “create an invoice”, “print this”, “make a Markdown copy”, or a request that only
+contains a URL. Generic “give me/download/export/save the PDF” requests without explicit local-file
+intent belong to `invompt-invoice` for the hosted link. A filename alone does not require a local
+export unless the user asks the assistant to save a file.
+
+## Hosted-link routing guard
+
+Before the local export preflight, check whether the request only asks for a PDF without asking
+for a local file or path. If so, stop this skill without fetching or constructing a PDF URL and
+route the request to `invompt-invoice`, which returns the fresh hosted invoice URL for the user's
+browser PDF download control. For example, “Guarda esa factura como PDF” without explicit local-file
+intent uses the hosted route. Never claim a local download in that route.
 
 ## Procedure
 

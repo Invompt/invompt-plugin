@@ -1,6 +1,6 @@
 # Invompt agent plugin
 
-Create invoices from your AI assistant and review them before sending.
+Create and review invoice drafts from your AI assistant.
 
 Start without creating an account. Create one later and keep all your invoices.
 

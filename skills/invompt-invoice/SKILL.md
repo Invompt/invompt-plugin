@@ -1,7 +1,7 @@
 ---
 name: invompt-invoice
 description: |
-  Create or manage an Invompt invoice from a natural-language request. Quote and estimate documents are typed InvoML documents handled by the invoice-named tools; a pro forma uses documentType quote. Use to create, find, review, revise, archive, or restore a billing document, create, find, revise, or archive a saved client, or list, inspect, preview, and explicitly save an existing invoice as a reusable template. List and get summaries are invoice-shaped; documentType and expiryDate require canonical invomlContent. There are no separate type-specific quote, estimate, or pro-forma tools, Web generators, selectors, or first-class editor fields. Use to email an existing document as the server-rendered PDF through send_invoice_email after the user confirms the recipient. Do not use for general pricing advice, taking payment, or unrelated writing.
+  Create or manage an Invompt invoice from a natural-language request. Quote and estimate documents are typed InvoML documents handled by the invoice-named tools; a pro forma uses documentType quote. Use to create, find, review, revise, archive, or restore billing documents and saved clients, or to inspect and save reusable invoice templates. List and get summaries are invoice-shaped; documentType and expiryDate require canonical invomlContent. There are no separate type-specific tools. For a generic PDF request, return the hosted invoice link so the user can open it and use PDF download; use the separate export skill only for an explicit local PDF file or destination. Emailing an existing document as the server-rendered PDF requires a signed-in account and recipient confirmation. Do not use for general pricing advice, taking payment, or unrelated writing.
 ---
 
 # Invompt Invoice Workflow
@@ -37,10 +37,11 @@ estimate, or pro-forma tools, Web generators, selectors, or first-class editor f
 | Save or revise a client | Use `create_client` or `update_client` only after resolving duplicates and user intent. |
 | Archive a saved client | Confirm the target and authorization, then use `archive_client`. |
 | Find or read existing documents | Use `list_invoices` and `get_invoice` when exposed. |
+| Get or download an invoice as PDF without a local destination | Use the invoice workflow to return the fresh hosted URL; tell the user to open it and use the Web invoice's existing PDF download control. Do not fetch or claim a native attachment. |
 | Find or inspect reusable invoice templates | Use `list_invoice_templates` and `get_invoice_template` when exposed. |
 | Save an existing invoice as a reusable template | Use `preview_invoice_template_extraction`, show the exclusions, and call `save_invoice_as_template` only after explicit confirmation of the exact preview. |
 | Revise, translate, correct, or restyle an existing document | Use `update_invoice` when exposed. |
-| Renew an expired hosted link | Use `renew_invoice_link` when exposed. |
+| Renew an expired hosted link | Use `renew_invoice_link` only when the user explicitly asks to renew it and the invoice is identified and active. |
 | Send an existing document by email as a PDF | Identify the document with `list_invoices` or `get_invoice`, then resolve the recipient before calling `send_invoice_email` when exposed: if the user already gave an explicit email, confirm and use it; otherwise, if the invoice has a saved `clientId`, call `get_client` and propose its email for confirmation; if there is no saved client or it has no email, ask the user for the recipient email or which saved client to use. Never invent or guess an address. If it returns `FORBIDDEN`, explain that sending needs a registered account and offer `create_account_claim_link`. If it returns `RATE_LIMITED`, explain that the account hit the daily send limit (50 per account per UTC day, resets at midnight UTC) or the short per-minute burst guard, and do not retry automatically. Never render, attach, or fetch the PDF yourself; report only the delivery receipt. |
 | Archive an existing document | Confirm the target and authorization, then use `archive_invoice`. |
 | Restore an archived document | Confirm the target, then use `unarchive_invoice` when exposed. |
@@ -183,9 +184,19 @@ one effective-provider preflight in the active host:
   richer canonical fields and verify with `get_invoice` only when its advertised schema and
   call-time authorization support that read. Never mark a valid update failed because optional
   fields or read-back are unavailable, and never retry an ambiguous non-idempotent update.
-- If `get_invoice` reports no active hosted link, use `renew_invoice_link` when exposed with a
-  stable idempotency key only when its live schema exposes or requires one. Renewal rotates the
-  public capability without revising the invoice.
+- If the user explicitly asks to renew an identified active invoice's hosted link and
+  `renew_invoice_link` is exposed, use it with a stable idempotency key only when its live schema
+  exposes or requires one. Renewal rotates the public capability without revising the invoice.
+- A generic request such as “give me the PDF”, “export as PDF”, “save as PDF”, “Guarda esa factura
+  como PDF”, or “download the invoice” uses the
+  hosted-link route unless the user explicitly asks for a local file or supplies a local path. Read
+  the identified invoice with `get_invoice` immediately before sharing, return its trusted `url`,
+  and explain that the user can open it and use the PDF download button. Opening this public link
+  and downloading its PDF do not require signing in to the Web product; the existing MCP connection
+  still authorizes the invoice read. Do not invent or
+  append `/pdf`, claim that a file was downloaded, or create an attachment. If the invoice is
+  archived, missing, or has no active link, report that state; do not restore, renew, or otherwise
+  mutate it automatically.
 - Treat archive as destructive even when implemented as a soft delete. Require an identified target
   and clear user authorization.
 - For saved-client writes, send idempotency and expected-version controls only when the live schema
@@ -208,12 +219,15 @@ one effective-provider preflight in the active host:
 ## Hard Boundaries
 
 - Never bypass MCP with direct Invompt REST calls.
-- Never create a replacement PDF, document, site, code artifact, or filesystem output. An explicit
-  request to save an existing invoice as PDF is routed to the separate `invompt-export` skill;
-  this invoice skill never exports automatically after creation or mutation.
+- Never create a replacement PDF, document, site, code artifact, or filesystem output. Generic PDF
+  requests use the hosted-link route above. An explicit request to save an existing invoice as a
+  local PDF is routed to the separate `invompt-export` skill; this invoice skill never exports
+  automatically after creation or mutation.
 - Never launch Chromium, Puppeteer, or a PDF CLI for this workflow.
 - Never silently switch to another MCP server or environment.
-- Return Invompt's hosted URL; the Web product owns preview and download/print.
+- Return Invompt's hosted URL for hosted-link PDF requests; the Web product owns preview and
+  download/print. The URL is user-facing in this route, while the local export skill keeps its
+  capability URL private during filesystem export.
 
 The export skill is the sole explicit read-only PDF GET/filesystem exception. It must refresh
 through `get_invoice`, trust only the returned URL, and use the canonical preview PDF route.

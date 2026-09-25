@@ -1,4 +1,4 @@
 interface:
   display_name: "Invompt Invoice PDF"
-  short_description: "Export an existing invoice as PDF"
-  default_prompt: "Use $invompt-export to export an existing Invompt invoice as a PDF."
+  short_description: "Save an invoice as a local PDF file"
+  default_prompt: "Use $invompt-export to save an existing Invompt invoice as a local PDF file."

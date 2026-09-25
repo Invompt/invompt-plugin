@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "invompt",
-  "description": "Create invoices from your AI assistant and review them before sending.",
+  "description": "Create and review invoice drafts from your AI assistant.",
   "owner": {
     "name": "Invompt"
   },
@@ -9,7 +9,7 @@
     {
       "name": "invompt",
       "source": "./",
-      "description": "Create invoices from your AI assistant and review them before sending."
+      "description": "Create and review invoice drafts from your AI assistant."
     }
   ]
 }

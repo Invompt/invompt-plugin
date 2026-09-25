@@ -1,7 +1,7 @@
 {
   "name": "invompt",
-  "version": "1.2.84",
-  "description": "Create invoices from your AI assistant and review them before sending.",
+  "version": "1.2.85",
+  "description": "Create and review invoice drafts from your AI assistant.",
   "author": {
     "name": "Invompt"
   },
@@ -17,7 +17,7 @@
   "interface": {
     "displayName": "Invompt",
     "shortDescription": "Create and review invoices.",
-    "longDescription": "Create invoices from your AI assistant and review them before sending. Start without creating an account. Create one later and keep all your invoices. Use the same workflow for quotes and estimates; a pro forma is represented as a quote. Reuse saved clients and settings, inspect hosted review links, revise the selected document, export an existing invoice as a PDF, or email the selected document after confirming the recipient. You control every document change and delivery; Invompt does not process payments.",
+    "longDescription": "Create and review invoice drafts from your AI assistant. Start without creating an account. Create one later and keep all your invoices. Use the same workflow for quotes and estimates; a pro forma is represented as a quote. Reuse saved clients and settings, inspect hosted review links, revise the selected document, or download an existing invoice as a PDF. Email delivery requires a signed-in account and recipient confirmation. You control every document change; Invompt does not process payments.",
     "developerName": "Invompt",
     "category": "Productivity",
     "capabilities": [
@@ -29,8 +29,8 @@
     "termsOfServiceURL": "https://invompt.com/terms",
     "defaultPrompt": [
       "Create a quote from this conversation. Ask for any missing billing details before saving it.",
-      "Export an existing Invompt invoice as a PDF.",
-      "Email the selected document after I confirm the recipient."
+      "Give me the hosted invoice link so I can open it and download the PDF.",
+      "When I am signed in, email the selected document after I confirm the recipient."
     ],
     "brandColor": "#6B8F71",
     "logo": "./assets/brand/publication/invompt-dark-256.png",

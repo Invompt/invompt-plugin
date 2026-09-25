@@ -1,7 +1,7 @@
 {
   "name": "invompt",
-  "version": "1.2.84",
-  "description": "Create invoices from your AI assistant and review them before sending.",
+  "version": "1.2.85",
+  "description": "Create and review invoice drafts from your AI assistant.",
   "author": {
     "name": "Invompt"
   }
