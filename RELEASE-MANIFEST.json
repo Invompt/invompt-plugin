@@ -5,7 +5,7 @@
   "installPublicationState": "release-artifact",
   "source": {
     "publicRepository": "https://github.com/Invompt/invompt-plugin",
-    "canonicalHubCommit": "7047a693472c4a0646a7b9f3da06749374687319",
+    "canonicalHubCommit": "45ce01156fd482c3e2cd1ed05e77e57f6ac75f2f",
     "brandMaster": {
       "path": "assets/brand/invompt-master.svg",
       "sha256": "14f33c26f36798d03dab97eb51985986940d9a73de015c4242ebdf89b9f6d05a"
@@ -19,7 +19,7 @@
     ".github/workflows/public-readme-policy.yml": "6ae2f985ed335a2e7e03f5856c74439f6fd596027940ad398515af575a891276",
     ".kimi-plugin/plugin.json": "5545b623f7e9b26ae83a98adeb4288d7835e634cce4a4af0bde497d74f540909",
     ".mcp.json": "e8e5926d8c4676ff200b6ae694e1a1ef8642416422a96d08967930b6e00f2caf",
-    "INSTALL.md": "2dbb6bae2359cebb8cb0412822a4f89fa3caa5edbfc2aba6046f3a9704b6d583",
+    "INSTALL.md": "49b8e90eba1233af7a64460884f6df63bbc1f2098cd628a8a2b5b63622321fec",
     "LICENSE": "1dd8784117e091d9aba542e6ee0b657bd0e6e73bbb7e8820b5e63f106eb2d1a0",
     "README.md": "b931daeb8193c71de2600c3d500eda11ec763f9466e5ac2fa2ee203916b189a7",
     "SECURITY.md": "492988f514a51656613a808a2dfbb0ad150d73cbea4bfd9d7de3f59fef8ab08b",

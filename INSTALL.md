@@ -39,7 +39,7 @@ Only when the selected branch requires login because auth_status is not_logged_i
 
 OAuth is required. During the connection flow, choose Continue without an account, Sign in, Create account, or Deny. Guide me through the browser connection and wait until I finish. Tell me to quit and reopen Codex Desktop, or restart the Codex CLI process. In the fresh session, verify that Invompt works with a read-only `list_invoices` call.
 
-If something fails, explain the error and retry only the failed step. If I want another option, offer this documented alternative: Stop and report that the native plugin path is unavailable. Do not add a raw Codex MCP entry or modify configuration outside the native plugin workflow. If that is unavailable, show me the other supported apps.
+If any setup or update step fails, stop, repeat only the filtered readback, report the exact Invompt state, and do not retry a mutation or improvise a rollback. If I want another option, offer this documented alternative: Stop and report that the native plugin path is unavailable. Do not add a raw Codex MCP entry or modify configuration outside the native plugin workflow. If that is unavailable, show me the other supported apps.
 
 If this is not Codex, use the matching host instructions instead.
 
